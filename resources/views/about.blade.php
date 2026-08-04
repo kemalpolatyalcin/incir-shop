@@ -9,7 +9,7 @@
             <div class="about-content animate-fade-left">
                 <span class="section-subtitle animate-fade-left delay-1">Biz Kimiz?</span>
                 <h2 class="animate-fade-left delay-2">Söke Yamaç Köyü Gıda Tarım</h2>
-                <p class="animate-fade-left delay-3">Söke Yamaç Köyü Gıda Tarım San ve Tic Ltd Şti olarak, Ege'nin binlerce yıllık tarım kültürünü and eşsiz zenginliklerini korumak, yaşatmak ve en saf haliyle sofralarınıza ulaştırmak amacıyla yola çıktık. Söke'nin Samsun Dağları eteklerinde kurulu, kendine özgü iklimiyle bilinen Yamaç Köyü'nün yüksek kesimlerinde, ailemizin nesiller boyu sürdürdüğü tarımsal üretimi kurumsal bir çatı altında birleştirdik.</p>
+                <p class="animate-fade-left delay-3">Söke Yamaç Köyü Gıda Tarım San ve Tic Ltd Şti olarak, Ege'nin binlerce yıllık tarım kültürünü ve eşsiz zenginliklerini korumak, yaşatmak ve en saf haliyle sofralarınıza ulaştırmak amacıyla yola çıktık. Söke'nin Samsun Dağları eteklerinde kurulu, kendine özgü iklimiyle bilinen Yamaç Köyü'nün yüksek kesimlerinde, ailemizin nesiller boyu sürdürdüğü tarımsal üretimi kurumsal bir çatı altında birleştirdik.</p>
                 <p class="animate-fade-left delay-3">Yamaç Köyü, konumu itibarıyla Dilek Yarımadası dağlarından esen serin ve nemsiz poyraz rüzgarlarını doğrudan alır. Bu esinti, incirlerimizin dalında kendi kendine ballanıp suyunu çekerek en ideal kıvamda kurumasına imkan sağlar. Ege'nin bu doğal hediyesini hiçbir kimyasal işleme tabi tutmadan, geleneksel kurutma sergilerinde kurutuyor ve el işçiliğiyle seçerek paketliyoruz.</p>
                 
                 <div class="stats-grid animate-fade-up delay-3">

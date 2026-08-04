@@ -19,6 +19,7 @@
                 <a href="{{ route('home') }}" class="nav-link {{ Route::is('home') ? 'active' : '' }}" id="nav-home">Ana Sayfa</a>
                 <a href="{{ route('about') }}" class="nav-link {{ Route::is('about') ? 'active' : '' }}" id="nav-about">Hakkımızda</a>
                 <a href="{{ route('contact') }}" class="nav-link {{ Route::is('contact') ? 'active' : '' }}" id="nav-contact">İletişim</a>
+                <a href="{{ route('login') }}" class="nav-btn" id="nav-admin" style="font-size: 0.85rem; padding: 0.5rem 1rem;">Admin Paneli</a>
             </nav>
 
             <button class="mobile-menu-btn" id="mobile-toggle" aria-label="Menüyü Aç">
@@ -51,6 +52,7 @@
                     <li><a href="{{ route('home') }}" class="footer-link" id="footer-link-home">Ana Sayfa</a></li>
                     <li><a href="{{ route('about') }}" class="footer-link" id="footer-link-about">Hakkımızda</a></li>
                     <li><a href="{{ route('contact') }}" class="footer-link" id="footer-link-contact">İletişim</a></li>
+                    <li><a href="{{ route('login') }}" class="footer-link" id="footer-link-admin" style="color: var(--accent-gold-light); font-weight: 600;">Admin Paneli</a></li>
                 </ul>
             </div>
 
