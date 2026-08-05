@@ -23,7 +23,7 @@
                 </div>
             </div>
             <div class="hero-image-wrapper animate-fade-scale">
-                <img src="{{ asset('images/6.jpg') }}" alt="Naturel Dağ İnciri" class="hero-image">
+                <img src="{{ asset($photos[6]->path ?? 'images/6.jpg') }}?v={{ $photos[6]->updated_at->timestamp ?? time() }}" alt="Naturel Dağ İnciri" class="hero-image">
             </div>
         </div>
     </section>
@@ -38,54 +38,52 @@
             <div class="slider-container reveal-scale">
                 <div class="slider-wrapper" id="main-slider">
                     <div class="slide">
-                        <img src="{{ asset('images/2.jpg') }}" alt="Yeşil Dağ İncirleri Dalında">
+                        <img src="{{ asset($photos[2]->path ?? 'images/2.jpg') }}?v={{ $photos[2]->updated_at->timestamp ?? time() }}" alt="Yeşil Dağ İncirleri Dalında">
                         <div class="slide-caption">
-                            <h3>Olgunlaşma Süreci</h3>
-                            <p>Yaz aylarının sıcak günlerinde yavaşça sararıp ballanmayı bekleyen yeşil incirler.</p>
+                            <h3>{{ $photos[2]->title ?? 'Olgunlaşma Süreci' }}</h3>
+                            <p>{{ $photos[2]->description ?? 'Yaz aylarının sıcak günlerinde yavaşça sararıp ballanmayı bekleyen yeşil incirler.' }}</p>
                         </div>
                     </div>
                     <div class="slide">
-                        <img src="{{ asset('images/11.jpg') }}" alt="Özenle Hazırlanan Defneli Kuru İncirler">
+                        <img src="{{ asset($photos[11]->path ?? 'images/11.jpg') }}?v={{ $photos[11]->updated_at->timestamp ?? time() }}" alt="Özenle Hazırlanan Defneli Kuru İncirler">
                         <div class="slide-caption">
-                            <h3>Geleneksel Ambalajlama</h3>
-                            <p>Defne yapraklarıyla zenginleştirilmiş, tazeliğini uzun süre koruyan kraft kağıt paketlerimiz.
-                            </p>
+                            <h3>{{ $photos[11]->title ?? 'Geleneksel Ambalajlama' }}</h3>
+                            <p>{{ $photos[11]->description ?? 'Defne yapraklarıyla zenginleştirilmiş, tazeliğini uzun süre koruyan kraft kağıt paketlerimiz.' }}</p>
                         </div>
                     </div>
                     <div class="slide">
-                        <img src="{{ asset('images/4.jpg') }}" alt="Hasat Sonrası Sepette Kuru İncirler">
+                        <img src="{{ asset($photos[4]->path ?? 'images/4.jpg') }}?v={{ $photos[4]->updated_at->timestamp ?? time() }}" alt="Hasat Sonrası Sepette Kuru İncirler">
                         <div class="slide-caption">
-                            <h3>Altın Sarısı Kuru İncirler</h3>
-                            <p>Geleneksel hasat sepetinde, güneşte doğal olarak kurumuş A kalite kuru incirler.</p>
+                            <h3>{{ $photos[4]->title ?? 'Altın Sarısı Kuru İncirler' }}</h3>
+                            <p>{{ $photos[4]->description ?? 'Geleneksel hasat sepetinde, güneşte doğal olarak kurumuş A kalite kuru incirler.' }}</p>
                         </div>
                     </div>
                     <div class="slide">
-                        <img src="{{ asset('images/7.jpg') }}" alt="Taze Sarı Dağ İnciri Hasatı" class="focus-bottom">
+                        <img src="{{ asset($photos[7]->path ?? 'images/7.jpg') }}?v={{ $photos[7]->updated_at->timestamp ?? time() }}" alt="Taze Sarı Dağ İnciri Hasatı" class="focus-bottom">
                         <div class="slide-caption">
-                            <h3>Taze Sarı Dağ İnciri</h3>
-                            <p>Yamaç Köyü bahçelerimizden tek tek elle seçilen iri ve ballı sarı dağ inciri.</p>
+                            <h3>{{ $photos[7]->title ?? 'Taze Sarı Dağ İnciri' }}</h3>
+                            <p>{{ $photos[7]->description ?? 'Yamaç Köyü bahçelerimizden tek tek elle seçilen iri ve ballı sarı dağ inciri.' }}</p>
                         </div>
                     </div>
                     <div class="slide">
-                        <img src="{{ asset('images/9.jpg') }}" alt="Ağaçta Olgunlaşan İncir Hasat Zamanı">
+                        <img src="{{ asset($photos[9]->path ?? 'images/9.jpg') }}?v={{ $photos[9]->updated_at->timestamp ?? time() }}" alt="Ağaçta Olgunlaşan İncir Hasat Zamanı">
                         <div class="slide-caption">
-                            <h3>Dalında Olgunlaşma</h3>
-                            <p>Kuzey rüzgarlarıyla dalında doğal olarak ballanan ve kuruyan dağ inciri hasadı.</p>
+                            <h3>{{ $photos[9]->title ?? 'Dalında Olgunlaşma' }}</h3>
+                            <p>{{ $photos[9]->description ?? 'Kuzey rüzgarlarıyla dalında doğal olarak ballanan ve kuruyan dağ inciri hasadı.' }}</p>
                         </div>
                     </div>
                     <div class="slide">
-                        <img src="{{ asset('images/10.jpg') }}" alt="Olgun İncirlerin Ağaçtaki Görünümü">
+                        <img src="{{ asset($photos[10]->path ?? 'images/10.jpg') }}?v={{ $photos[10]->updated_at->timestamp ?? time() }}" alt="Olgun İncirlerin Ağaçtaki Görünümü">
                         <div class="slide-caption">
-                            <h3>Doğal Ballanma</h3>
-                            <p>Güneş altında kuruma evresine giren yüksek kaliteli dağ incirleri.</p>
+                            <h3>{{ $photos[10]->title ?? 'Doğal Ballanma' }}</h3>
+                            <p>{{ $photos[10]->description ?? 'Güneş altında kuruma evresine giren yüksek kaliteli dağ incirleri.' }}</p>
                         </div>
                     </div>
                     <div class="slide">
-                        <img src="{{ asset('images/8.jpg') }}" alt="Söke Yamaç Köyü İncir Bahçelerimiz">
+                        <img src="{{ asset($photos[8]->path ?? 'images/8.jpg') }}?v={{ $photos[8]->updated_at->timestamp ?? time() }}" alt="Söke Yamaç Köyü İncir Bahçelerimiz">
                         <div class="slide-caption">
-                            <h3>Doğal Koruma ve Coğrafya</h3>
-                            <p>Dilek Yarımadası eteklerinde kurulu, serin poyraz rüzgarlarının estiği eşsiz incir
-                                bahçelerimiz.</p>
+                            <h3>{{ $photos[8]->title ?? 'Doğal Koruma ve Coğrafya' }}</h3>
+                            <p>{{ $photos[8]->description ?? 'Dilek Yarımadası eteklerinde kurulu, serin poyraz rüzgarlarının estiği eşsiz incir bahçelerimiz.' }}</p>
                         </div>
                     </div>
                 </div>
@@ -102,66 +100,6 @@
                 </button>
 
                 <div class="slider-dots" id="slider-dots-container"></div>
-            </div>
-        </div>
-    </section>
-
-    <section class="product-detail-section" id="naturel-incir">
-        <div class="section-container">
-            <div class="section-header reveal">
-                <span class="section-subtitle">Ürünlerimiz</span>
-                <h2 class="section-title">Bahçemizin En Seçkin Mahsulleri</h2>
-            </div>
-
-            <div class="product-detail-grid">
-                <div class="product-detail-card">
-                    <div class="product-detail-img-wrapper reveal-left">
-                        <img src="{{ asset('images/5.jpg') }}" alt="Naturel Seçme Kuru İncir" class="product-detail-img">
-                    </div>
-                    <div class="product-detail-info reveal-right">
-                        <span class="product-detail-badge">A Sınıfı Seçme</span>
-                        <h3>Naturel Seçme Kuru İncir</h3>
-                        <p>Söke Yamaç Köyü'nün en yüksek yamaçlarında yer alan ağaçlarımızdan toplanan A kalite kuru
-                            incirlerdir. Hasat sonrasında tek tek el ile seçilen iri boyuttaki incirlerimiz, ince kabuklu
-                            yapıları ve lokum kıvamındaki iç dolgusuyla benzersiz bir lezzet sunar.</p>
-                        <p>Tamamen geleneksel yöntemlerle, güneşte kurutulmuş olup rengini açmak amacıyla herhangi bir
-                            kimyasal beyazlatıcı uygulanmamıştır. Naturel rengi olan altın-bal rengindedir.</p>
-                    </div>
-                </div>
-
-                <div class="product-detail-card reverse">
-                    <div class="product-detail-info reveal-left">
-                        <span class="product-detail-badge">Geleneksel & Aromatik</span>
-                        <h3>Defne Yapraklı Kuru İncir</h3>
-                        <p>Kuru incirlerimizi, doğallığını koruyarak ve Ege'nin kadim saklama yöntemlerini yaşatarak yabani
-                            defne yaprakları eşliğinde paketliyoruz. Kraft paketlerin içerisine yerleştirilen doğal defne
-                            yaprakları, incirlerin kurumasını önleyerek lokumsu kıvamını uzun süre korumasına yardımcı olur.
-                        </p>
-                        <p>Aynı zamanda defne yaprakları, kuru incirlere hafif aromatik bir koku ve lezzet verirken,
-                            incirlerin böceklenmesini veya bozulmasını kimyasal ilaç kullanmadan doğal yollarla engeller.
-                        </p>
-                    </div>
-                    <div class="product-detail-img-wrapper reveal-right">
-                        <img src="{{ asset('images/6.jpg') }}" alt="Defne Yapraklı Kuru İncir" class="product-detail-img">
-                    </div>
-                </div>
-
-                <div class="product-detail-card">
-                    <div class="product-detail-img-wrapper reveal-left">
-                        <img src="{{ asset('images/7.jpg') }}" alt="Taze Sarı Dağ İnciri"
-                            class="product-detail-img focus-bottom">
-                    </div>
-                    <div class="product-detail-info reveal-right">
-                        <span class="product-detail-badge">Mevsimlik Taze Hasat</span>
-                        <h3>Taze Sarı Dağ İnciri</h3>
-                        <p>Ağustos ve Eylül aylarında olgunlaşan taze incirlerimiz, yamaç esintisinin serinliğinde sulanıp
-                            ballanır. Yüksek rakımda yetiştirilmesinden ötürü içindeki şeker oranı dengelidir ve boğucu bir
-                            tat yerine hafif ferahlatıcı bir aromaya sahiptir.</p>
-                        <p>Sabahın erken saatlerinde çiğ düşmeden toplanan taze sarı incirler, ince kabukları sayesinde
-                            kabuğu soyulmadan dahi tüketilebilir. Tamamen ilaçsız bahçelerimizden doğrudan sepetlere
-                            aktarılır.</p>
-                    </div>
-                </div>
             </div>
         </div>
     </section>

@@ -5,6 +5,7 @@ use App\Http\Controllers\FigController;
 use App\Http\Controllers\AdminController;
 
 Route::get('/', [FigController::class, 'index'])->name('home');
+Route::get('/urunler', [FigController::class, 'products'])->name('products');
 Route::get('/hakkimizda', [FigController::class, 'about'])->name('about');
 Route::get('/iletisim', [FigController::class, 'contact'])->name('contact');
 

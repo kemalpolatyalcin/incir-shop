@@ -788,7 +788,7 @@ main {
 .contact-map-mockup {
     background-color: var(--bg-secondary);
     border-radius: 16px;
-    height: 200px;
+    height: 380px;
     width: 100%;
     margin-top: 1.5rem;
     display: flex;
@@ -1451,6 +1451,14 @@ main {
     }
     .product-detail-card.reverse {
         grid-template-columns: 1fr;
+    }
+    .product-detail-card .product-detail-img-wrapper,
+    .product-detail-card.reverse .product-detail-img-wrapper {
+        grid-row: 1;
+    }
+    .product-detail-card .product-detail-info,
+    .product-detail-card.reverse .product-detail-info {
+        grid-row: 2;
     }
     .hero {
         padding: 4rem 2rem;

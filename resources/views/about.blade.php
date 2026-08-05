@@ -29,8 +29,8 @@
             </div>
             
             <div class="about-image-stack animate-fade-scale">
-                <img src="{{ asset('images/11.jpg') }}" alt="Özenle Hazırlanan Defneli Kuru İncirler" class="about-img-1 animate-fade-scale">
-                <img src="{{ asset('images/2.jpg') }}" alt="Dalında Yeşil İncirler" class="about-img-2 animate-fade-scale delay-1">
+                <img src="{{ asset($photos[11]->path ?? 'images/11.jpg') }}?v={{ $photos[11]->updated_at->timestamp ?? time() }}" alt="Özenle Hazırlanan Defneli Kuru İncirler" class="about-img-1 animate-fade-scale">
+                <img src="{{ asset($photos[2]->path ?? 'images/2.jpg') }}?v={{ $photos[2]->updated_at->timestamp ?? time() }}" alt="Dalında Yeşil İncirler" class="about-img-2 animate-fade-scale delay-1">
             </div>
         </div>
     </div>
@@ -94,16 +94,16 @@
         
         <div class="product-gallery">
             <div class="gallery-img-wrapper reveal-left">
-                <img src="{{ asset('images/9.jpg') }}" alt="Dalında Hasat İncelemesi" class="gallery-img">
+                <img src="{{ asset($photos[9]->path ?? 'images/9.jpg') }}?v={{ $photos[9]->updated_at->timestamp ?? time() }}" alt="Dalında Hasat İncelemesi" class="gallery-img">
             </div>
             <div class="gallery-img-wrapper reveal-right">
-                <img src="{{ asset('images/7.jpg') }}" alt="Taze Sarı Dağ İnciri" class="gallery-img focus-bottom">
+                <img src="{{ asset($photos[7]->path ?? 'images/7.jpg') }}?v={{ $photos[7]->updated_at->timestamp ?? time() }}" alt="Taze Sarı Dağ İnciri" class="gallery-img focus-bottom">
             </div>
             <div class="gallery-img-wrapper reveal-left">
-                <img src="{{ asset('images/8.jpg') }}" alt="Kraft Ambalajlı İncirler" class="gallery-img">
+                <img src="{{ asset($photos[8]->path ?? 'images/8.jpg') }}?v={{ $photos[8]->updated_at->timestamp ?? time() }}" alt="Kraft Ambalajlı İncirler" class="gallery-img">
             </div>
             <div class="gallery-img-wrapper reveal-right">
-                <img src="{{ asset('images/11.jpg') }}" alt="Yakın Çekim Ambalajlarımız" class="gallery-img">
+                <img src="{{ asset($photos[11]->path ?? 'images/11.jpg') }}?v={{ $photos[11]->updated_at->timestamp ?? time() }}" alt="Yakın Çekim Ambalajlarımız" class="gallery-img">
             </div>
         </div>
     </div>

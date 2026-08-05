@@ -34,13 +34,21 @@
                         </div>
                         <div class="contact-text">
                             <h4>Telefon Hattı</h4>
-                            <p>0532 7172110</p>
+                            <p><a href="tel:+905327172110" style="color: inherit; text-decoration: none;">+90 (532) 717 21 10</a></p>
                         </div>
                     </div>
                 </div>
                 
-                <div class="contact-map-mockup">
-                    <iframe src="https://maps.google.com/maps?q=Yama%C3%A7%20K%C3%B6y%C3%BC%2C%20S%C3%B6ke%2FAyd%C4%B1n&t=&z=13&ie=UTF8&iwloc=&output=embed" allowfullscreen="" loading="lazy"></iframe>
+                <div class="contact-map-mockup" style="position: relative;">
+                    <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=27.384597%2C37.772799%2C27.444597%2C37.812799&amp;layer=mapnik&amp;marker=37.792799%2C27.414597" allowfullscreen="" loading="lazy"></iframe>
+                    <a href="https://www.google.com/maps/place/Yama%C3%A7,+S%C3%B6ke%2FAyd%C4%B1n/@37.792799,27.414597,14z/" target="_blank" rel="noopener noreferrer" style="position: absolute; top: 12px; right: 12px; z-index: 10; background: var(--white); color: var(--accent-olive); padding: 8px 16px; border-radius: 8px; font-size: 0.85rem; font-weight: 600; text-decoration: none; box-shadow: var(--shadow-sm); border: 1px solid rgba(0,0,0,0.08); display: flex; align-items: center; gap: 6px; transition: var(--transition);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='var(--shadow-md)';" onmouseout="this.style.transform='none'; this.style.boxShadow='var(--shadow-sm)';">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                            <polyline points="15 3 21 3 21 9"></polyline>
+                            <line x1="10" y1="14" x2="21" y2="3"></line>
+                        </svg>
+                        <span>Haritada Aç</span>
+                    </a>
                 </div>
             </div>
             

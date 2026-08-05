@@ -44,7 +44,8 @@ class AdminController extends Controller
 
     public function dashboard()
     {
-        return view('admin.dashboard');
+        $photos = \App\Models\Photo::orderBy('id')->get()->keyBy('id');
+        return view('admin.dashboard', compact('photos'));
     }
 
     public function uploadImage(Request $request)
@@ -69,6 +70,12 @@ class AdminController extends Controller
         
         imagejpeg($im, $newFilePath, 90);
         imagedestroy($im);
+
+        $photo = \App\Models\Photo::find($imgId);
+        if ($photo) {
+            $photo->path = 'images/' . $fileName;
+            $photo->save();
+        }
 
         return back()->with('success', 'Görsel ' . $imgId . '.jpg başarıyla güncellendi ve optimize edildi.');
     }

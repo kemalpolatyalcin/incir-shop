@@ -21,8 +21,8 @@
 
         <div class="admin-grid">
             <div class="admin-image-card">
-                <span class="admin-image-title">2.jpg (Slider / Yeşil İncir)</span>
-                <img src="{{ asset('images/2.jpg') }}" alt="Görsel 2" class="admin-image-preview">
+                <span class="admin-image-title">{{ $photos[2]->title ?? 'Yeşil İncir' }} (2.jpg)</span>
+                <img src="{{ asset($photos[2]->path ?? 'images/2.jpg') }}?v={{ $photos[2]->updated_at->timestamp ?? time() }}" alt="Görsel 2" class="admin-image-preview">
                 <form action="{{ route('admin.upload_image') }}" method="POST" class="admin-upload-form" enctype="multipart/form-data">
                     @csrf
                     <input type="hidden" name="img_id" value="2">
@@ -32,8 +32,8 @@
             </div>
 
             <div class="admin-image-card">
-                <span class="admin-image-title">4.jpg (Slider / Hasat Sepeti)</span>
-                <img src="{{ asset('images/4.jpg') }}" alt="Görsel 4" class="admin-image-preview">
+                <span class="admin-image-title">{{ $photos[4]->title ?? 'Hasat Sepeti' }} (4.jpg)</span>
+                <img src="{{ asset($photos[4]->path ?? 'images/4.jpg') }}?v={{ $photos[4]->updated_at->timestamp ?? time() }}" alt="Görsel 4" class="admin-image-preview">
                 <form action="{{ route('admin.upload_image') }}" method="POST" class="admin-upload-form" enctype="multipart/form-data">
                     @csrf
                     <input type="hidden" name="img_id" value="4">
@@ -43,8 +43,8 @@
             </div>
 
             <div class="admin-image-card">
-                <span class="admin-image-title">5.jpg (Ürün / Seçme İncir)</span>
-                <img src="{{ asset('images/5.jpg') }}" alt="Görsel 5" class="admin-image-preview">
+                <span class="admin-image-title">{{ $photos[5]->title ?? 'Seçme İncir' }} (5.jpg)</span>
+                <img src="{{ asset($photos[5]->path ?? 'images/5.jpg') }}?v={{ $photos[5]->updated_at->timestamp ?? time() }}" alt="Görsel 5" class="admin-image-preview">
                 <form action="{{ route('admin.upload_image') }}" method="POST" class="admin-upload-form" enctype="multipart/form-data">
                     @csrf
                     <input type="hidden" name="img_id" value="5">
@@ -54,8 +54,8 @@
             </div>
 
             <div class="admin-image-card">
-                <span class="admin-image-title">6.jpg (Ürün & Hero / Defneli İncir)</span>
-                <img src="{{ asset('images/6.jpg') }}" alt="Görsel 6" class="admin-image-preview">
+                <span class="admin-image-title">{{ $photos[6]->title ?? 'Defneli İncir' }} (6.jpg)</span>
+                <img src="{{ asset($photos[6]->path ?? 'images/6.jpg') }}?v={{ $photos[6]->updated_at->timestamp ?? time() }}" alt="Görsel 6" class="admin-image-preview">
                 <form action="{{ route('admin.upload_image') }}" method="POST" class="admin-upload-form" enctype="multipart/form-data">
                     @csrf
                     <input type="hidden" name="img_id" value="6">
@@ -65,8 +65,8 @@
             </div>
 
             <div class="admin-image-card">
-                <span class="admin-image-title">7.jpg (Ürün / Taze İncir)</span>
-                <img src="{{ asset('images/7.jpg') }}" alt="Görsel 7" class="admin-image-preview">
+                <span class="admin-image-title">{{ $photos[7]->title ?? 'Taze İncir' }} (7.jpg)</span>
+                <img src="{{ asset($photos[7]->path ?? 'images/7.jpg') }}?v={{ $photos[7]->updated_at->timestamp ?? time() }}" alt="Görsel 7" class="admin-image-preview">
                 <form action="{{ route('admin.upload_image') }}" method="POST" class="admin-upload-form" enctype="multipart/form-data">
                     @csrf
                     <input type="hidden" name="img_id" value="7">
@@ -76,8 +76,8 @@
             </div>
 
             <div class="admin-image-card">
-                <span class="admin-image-title">8.jpg (Slider / Manzara)</span>
-                <img src="{{ asset('images/8.jpg') }}" alt="Görsel 8" class="admin-image-preview">
+                <span class="admin-image-title">{{ $photos[8]->title ?? 'Manzara' }} (8.jpg)</span>
+                <img src="{{ asset($photos[8]->path ?? 'images/8.jpg') }}?v={{ $photos[8]->updated_at->timestamp ?? time() }}" alt="Görsel 8" class="admin-image-preview">
                 <form action="{{ route('admin.upload_image') }}" method="POST" class="admin-upload-form" enctype="multipart/form-data">
                     @csrf
                     <input type="hidden" name="img_id" value="8">
@@ -87,8 +87,8 @@
             </div>
 
             <div class="admin-image-card">
-                <span class="admin-image-title">9.jpg (Slider & Galeri / Ağaçta Hasat)</span>
-                <img src="{{ asset('images/9.jpg') }}" alt="Görsel 9" class="admin-image-preview">
+                <span class="admin-image-title">{{ $photos[9]->title ?? 'Ağaçta Hasat' }} (9.jpg)</span>
+                <img src="{{ asset($photos[9]->path ?? 'images/9.jpg') }}?v={{ $photos[9]->updated_at->timestamp ?? time() }}" alt="Görsel 9" class="admin-image-preview">
                 <form action="{{ route('admin.upload_image') }}" method="POST" class="admin-upload-form" enctype="multipart/form-data">
                     @csrf
                     <input type="hidden" name="img_id" value="9">
@@ -98,8 +98,8 @@
             </div>
 
             <div class="admin-image-card">
-                <span class="admin-image-title">10.jpg (Slider / Ballanan İncir)</span>
-                <img src="{{ asset('images/10.jpg') }}" alt="Görsel 10" class="admin-image-preview">
+                <span class="admin-image-title">{{ $photos[10]->title ?? 'Ballanan İncir' }} (10.jpg)</span>
+                <img src="{{ asset($photos[10]->path ?? 'images/10.jpg') }}?v={{ $photos[10]->updated_at->timestamp ?? time() }}" alt="Görsel 10" class="admin-image-preview">
                 <form action="{{ route('admin.upload_image') }}" method="POST" class="admin-upload-form" enctype="multipart/form-data">
                     @csrf
                     <input type="hidden" name="img_id" value="10">
@@ -109,8 +109,8 @@
             </div>
 
             <div class="admin-image-card">
-                <span class="admin-image-title">11.jpg (Slider & Galeri / Ambalaj)</span>
-                <img src="{{ asset('images/11.jpg') }}" alt="Görsel 11" class="admin-image-preview">
+                <span class="admin-image-title">{{ $photos[11]->title ?? 'Ambalaj' }} (11.jpg)</span>
+                <img src="{{ asset($photos[11]->path ?? 'images/11.jpg') }}?v={{ $photos[11]->updated_at->timestamp ?? time() }}" alt="Görsel 11" class="admin-image-preview">
                 <form action="{{ route('admin.upload_image') }}" method="POST" class="admin-upload-form" enctype="multipart/form-data">
                     @csrf
                     <input type="hidden" name="img_id" value="11">
