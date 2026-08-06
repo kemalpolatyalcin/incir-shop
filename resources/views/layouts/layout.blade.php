@@ -17,7 +17,7 @@
             
             <nav class="navbar-links" id="navbar-links-menu">
                 <a href="{{ route('home') }}" class="nav-link {{ Route::is('home') ? 'active' : '' }}" id="nav-home">Ana Sayfa</a>
-                <a href="{{ route('products') }}" class="nav-link {{ Route::is('products') ? 'active' : '' }}" id="nav-products">Ürünler</a>
+                <a href="{{ route('products') }}" class="nav-link {{ Route::is('products') ? 'active' : '' }}" id="nav-products">Ürünlerimiz</a>
                 <a href="{{ route('about') }}" class="nav-link {{ Route::is('about') ? 'active' : '' }}" id="nav-about">Hakkımızda</a>
                 <a href="{{ route('contact') }}" class="nav-link {{ Route::is('contact') ? 'active' : '' }}" id="nav-contact">İletişim</a>
                 <a href="{{ route('login') }}" class="nav-btn" id="nav-admin" style="font-size: 0.85rem; padding: 0.5rem 1rem;">Admin Paneli</a>
@@ -51,7 +51,7 @@
                 <h4 class="footer-title">Hızlı Linkler</h4>
                 <ul class="footer-links">
                     <li><a href="{{ route('home') }}" class="footer-link" id="footer-link-home">Ana Sayfa</a></li>
-                    <li><a href="{{ route('products') }}" class="footer-link" id="footer-link-products">Ürünler</a></li>
+                    <li><a href="{{ route('products') }}" class="footer-link" id="footer-link-products">Ürünlerimiz</a></li>
                     <li><a href="{{ route('about') }}" class="footer-link" id="footer-link-about">Hakkımızda</a></li>
                     <li><a href="{{ route('contact') }}" class="footer-link" id="footer-link-contact">İletişim</a></li>
                     <li><a href="{{ route('login') }}" class="footer-link" id="footer-link-admin" style="color: var(--accent-gold-light); font-weight: 600;">Admin Paneli</a></li>
@@ -74,13 +74,13 @@
                         <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
                         <circle cx="12" cy="10" r="3"></circle>
                     </svg>
-                    <span>Yamaç Köyü Söke / Aydın</span>
+                    <span>{{ \App\Models\SiteContent::getValue('contact_address', 'Yamaç Köyü Söke / Aydın') }}</span>
                 </div>
                 <div class="footer-contact-item">
                     <svg class="footer-contact-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
                     </svg>
-                    <a href="tel:+905327172110" style="color: inherit; text-decoration: none;">+90 (532) 717 21 10</a>
+                    <span>{{ \App\Models\SiteContent::getValue('contact_phone', '0532 7172110') }}</span>
                 </div>
             </div>
         </div>

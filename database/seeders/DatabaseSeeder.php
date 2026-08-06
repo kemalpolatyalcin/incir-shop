@@ -3,7 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\User;
-use App\Models\Photo;
+use App\Models\SiteContent;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
 
@@ -19,74 +19,28 @@ class DatabaseSeeder extends Seeder
             ]
         );
 
-        $defaultPhotos = [
-            [
-                'id' => 2,
-                'filename' => '2.jpg',
-                'title' => 'Olgunlaşma Süreci',
-                'description' => 'Yaz aylarının sıcak günlerinde yavaşça sararıp ballanmayı bekleyen yeşil incirler.',
-                'path' => 'images/2.jpg',
-            ],
-            [
-                'id' => 4,
-                'filename' => '4.jpg',
-                'title' => 'Altın Sarısı Kuru İncirler',
-                'description' => 'Geleneksel hasat sepetinde, güneşte doğal olarak kurumuş A kalite kuru incirler.',
-                'path' => 'images/4.jpg',
-            ],
-            [
-                'id' => 5,
-                'filename' => '5.jpg',
-                'title' => 'Naturel Seçme Kuru İncir',
-                'description' => "Söke Yamaç Köyü'nün en yüksek rakımlı yamaçlarında yer alan ağaçlarımızdan özenle hasat edilen premium kuru incirlerdir. Hasat sonrasında tek tek el ile seçilen iri boyuttaki (No: 1-2) incirlerimiz, son derece ince kabuklu yapıları ve lokum kıvamındaki yoğun iç dolgusuyla benzersiz bir lezzet sunar. Tamamen geleneksel yöntemlerle, güneş altında kurutulmuş olup rengini açmak amacıyla herhangi bir kimyasal beyazlatıcı (kükürt dioksit vb.) uygulanmamıştır. Altın-bal rengindeki yapısıyla yüksek lif, potasyum ve kalsiyum deposudur. 500g ve 1000g'lık özel korumalı ambalajlarda sunulmaktadır.",
-                'path' => 'images/5.jpg',
-            ],
-            [
-                'id' => 6,
-                'filename' => '6.jpg',
-                'title' => 'Defne Yapraklı Kuru İncir',
-                'description' => "Kuru incirlerimizi, Ege'nin bin yıllık kadim saklama yöntemlerini yaşatarak yabani defne yaprakları eşliğinde özenle paketliyoruz. Kraft ambalajların içerisine yerleştirilen doğal defne yaprakları, incirlerin sertleşmesini ve kurumasını önleyerek lokumsu yumuşaklığını uzun süre korumasına yardımcı olur. Aynı zamanda defne yaprağının salgıladığı doğal aromatik esanslar incire nüfuz ederek hafif ve asil bir aroma kazandırır. Kimyasal ilaçlama veya koruyucu madde içermeksizin, defne yaprağının doğal antiseptik özellikleri sayesinde incirler güvelenmeye karşı doğal yollarla korunur. Gurme lezzet arayanlar için eşsiz bir seçenektir.",
-                'path' => 'images/6.jpg',
-            ],
-            [
-                'id' => 7,
-                'filename' => '7.jpg',
-                'title' => 'Taze Sarı Dağ İnciri',
-                'description' => "Sadece Ağustos ve Eylül aylarındaki hasat döneminde, sabahın en erken saatlerinde çiğ düşmeden elle toplanan taze dağ incirlerimizdir. Yüksek rakımlı Samsun Dağları eteklerinde yetiştiği için ovalardaki incirlere kıyasla kabuğu çok daha incedir ve soyulmadan rahatlıkla tüketilebilir. Yamaç poyrazının serinliğinde olgunlaşması sayesinde şeker-asit dengesi mükemmel olup boğucu olmayan ferahlatıcı bir aromaya sahiptir. Bahçelerimizden doğrudan sepetlere aktarılan taze incirlerimiz, dalından koptuğu günkü tazeliğini koruması amacıyla özel korumalı soğuk zincir paketleme ile adresinize ulaştırılmaktadır.",
-                'path' => 'images/7.jpg',
-            ],
-            [
-                'id' => 8,
-                'filename' => '8.jpg',
-                'title' => 'Doğal Koruma ve Coğrafya',
-                'description' => 'Dilek Yarımadası eteklerinde kurulu, serin poyraz rüzgarlarının estiği eşsiz incir bahçelerimiz.',
-                'path' => 'images/8.jpg',
-            ],
-            [
-                'id' => 9,
-                'filename' => '9.jpg',
-                'title' => 'Dalında Olgunlaşma',
-                'description' => 'Kuzey rüzgarlarıyla dalında doğal olarak ballanan ve kuruyan dağ inciri hasadı.',
-                'path' => 'images/9.jpg',
-            ],
-            [
-                'id' => 10,
-                'filename' => '10.jpg',
-                'title' => 'Doğal Ballanma',
-                'description' => 'Güneş altında kuruma evresine giren yüksek kaliteli dağ incirleri.',
-                'path' => 'images/10.jpg',
-            ],
-            [
-                'id' => 11,
-                'filename' => '11.jpg',
-                'title' => 'Geleneksel Ambalajlama',
-                'description' => 'Defne yapraklarıyla zenginleştirilmiş, tazeliğini uzun süre koruyan kraft kağıt paketlerimiz.',
-                'path' => 'images/11.jpg',
-            ],
+        $contents = [
+            'hero_title' => 'Güneşin ve Dağ Rüzgarının Kuruttuğu Altın Değer',
+            'hero_description' => "Söke Yamaç Köyü'nün serin dağ esintisiyle dalında kendiliğinden ballanıp kuruyan, kimyasal işlem görmemiş en kaliteli naturel dağ incirlerini sunuyoruz.",
+            'product_1_title' => 'Naturel Seçme Kuru İncir',
+            'product_1_desc' => "Söke Yamaç Köyü'nün en yüksek yamaçlarında yer alan ağaçlarımızdan toplanan A kalite kuru incirlerdir. Hasat sonrasında tek tek el ile seçilen iri boyuttaki incirlerimiz, ince kabuklu yapıları ve lokum kıvamındaki iç dolgusuyla benzersiz bir lezzet sunar. Tamamen geleneksel yöntemlerle, güneşte kurutulmuş olup rengini açmak amacıyla herhangi bir kimyasal beyazlatıcı uygulanmamıştır. Naturel rengi olan altın-bal rengindedir.",
+            'product_2_title' => 'Defne Yapraklı Kuru İncir',
+            'product_2_desc' => "Kuru incirlerimizi, doğallığını koruyarak ve Ege'nin kadim saklama yöntemlerini yaşatarak yabani defne yaprakları eşliğinde paketliyoruz. Kraft paketlerin içerisine yerleştirilen doğal defne yaprakları, incirlerin kurumasını önleyerek lokumsi kıvamını uzun süre korumasına yardımcı olur. Aynı zamanda defne yaprakları, kuru incirlere hafif aromatik bir koku ve lezzet verirken, incirlerin böceklenmesini veya bozulmasını kimyasal ilaç kullanmadan doğal yollarla engeller.",
+            'product_3_title' => 'Taze Sarı Dağ İnciri',
+            'product_3_desc' => "Ağustos ve Eylül aylarında olgunlaşan taze incirlerimiz, yamaç esintisinin serinliğinde sulanıp ballanır. Yüksek rakımda yetiştirilmesinden ötürü içindeki şeker oranı dengelidir ve boğucu bir tat yerine hafif ferahlatıcı bir aromaya sahiptir. Sabahın erken saatlerinde çiğ düşmeden toplanan taze sarı incirler, ince kabukları sayesinde kabuğu soyulmadan dahi tüketilebilir. Tamamen ilaçsız bahçelerimizden doğrudan sepetlere aktarılır.",
+            'about_title' => 'Söke Yamaç Köyü Gıda Tarım',
+            'about_text_1' => "Söke Yamaç Köyü Gıda Tarım San ve Tic Ltd Şti olarak, Ege'nin binlerce yıllık tarım kültürünü ve eşsiz zenginliklerini korumak, yaşatmak ve en saf haliyle sofralarınıza ulaştırmak amacıyla yola çıktık. Söke'nin Samsun Dağları eteklerinde kurulu, kendine özgü iklimiyle bilinen Yamaç Köyü'nün yüksek kesimlerinde, ailemizin nesiller boyu sürdürdüğü tarımsal üretimi kurumsal bir çatı altında birleştirdik.",
+            'about_text_2' => "Yamaç Köyü, konumu itibarıyla Dilek Yarımadası dağlarından esen serin ve nemsiz poyraz rüzgarlarını doğrudan alır. Bu esinti, incirlerimizin dalında kendi kendine ballanıp suyunu çekerek en ideal kıvamda kurumasına imkan sağlar. Ege'nin bu doğal hediyesini hiçbir kimyasal işleme tabi tutmadan, geleneksel kurutma sergilerinde kurutuyor ve el işçiliğiyle seçerek paketliyoruz.",
+            'contact_address' => 'Yamaç Köyü, Söke / Aydın',
+            'contact_phone' => '0532 7172110',
+            'contact_map_url' => 'https://maps.google.com/maps?q=Yama%C3%A7%20K%C3%B6y%C3%BC%2C%20S%C3%B6ke%2FAyd%C4%B1n&t=&z=13&ie=UTF8&iwloc=&output=embed'
         ];
 
-        foreach ($defaultPhotos as $photo) {
-            Photo::updateOrCreate(['id' => $photo['id']], $photo);
+        foreach ($contents as $key => $value) {
+            SiteContent::updateOrCreate(
+                ['key' => $key],
+                ['value' => $value]
+            );
         }
     }
 }

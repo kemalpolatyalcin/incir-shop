@@ -575,6 +575,7 @@ main {
     grid-template-columns: 1.2fr 1fr;
     gap: 5rem;
     align-items: center;
+    scroll-margin-top: 120px;
 }
 
 .product-detail-card.reverse {
@@ -788,7 +789,7 @@ main {
 .contact-map-mockup {
     background-color: var(--bg-secondary);
     border-radius: 16px;
-    height: 380px;
+    height: 200px;
     width: 100%;
     margin-top: 1.5rem;
     display: flex;
@@ -1445,20 +1446,18 @@ main {
 }
 
 @media (max-width: 1024px) {
-    .hero-container, .features-grid, .product-detail-card, .about-intro, .contact-layout, .footer-container {
+    .hero-container, .features-grid, .about-intro, .contact-layout, .footer-container {
         grid-template-columns: 1fr;
         gap: 3rem;
     }
+    .product-detail-card {
+        display: flex;
+        flex-direction: column;
+        gap: 2.5rem;
+    }
     .product-detail-card.reverse {
-        grid-template-columns: 1fr;
-    }
-    .product-detail-card .product-detail-img-wrapper,
-    .product-detail-card.reverse .product-detail-img-wrapper {
-        grid-row: 1;
-    }
-    .product-detail-card .product-detail-info,
-    .product-detail-card.reverse .product-detail-info {
-        grid-row: 2;
+        flex-direction: column-reverse;
+        direction: ltr;
     }
     .hero {
         padding: 4rem 2rem;

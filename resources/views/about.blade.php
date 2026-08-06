@@ -8,9 +8,9 @@
         <div class="about-intro">
             <div class="about-content animate-fade-left">
                 <span class="section-subtitle animate-fade-left delay-1">Biz Kimiz?</span>
-                <h2 class="animate-fade-left delay-2">Söke Yamaç Köyü Gıda Tarım</h2>
-                <p class="animate-fade-left delay-3">Söke Yamaç Köyü Gıda Tarım San ve Tic Ltd Şti olarak, Ege'nin binlerce yıllık tarım kültürünü ve eşsiz zenginliklerini korumak, yaşatmak ve en saf haliyle sofralarınıza ulaştırmak amacıyla yola çıktık. Söke'nin Samsun Dağları eteklerinde kurulu, kendine özgü iklimiyle bilinen Yamaç Köyü'nün yüksek kesimlerinde, ailemizin nesiller boyu sürdürdüğü tarımsal üretimi kurumsal bir çatı altında birleştirdik.</p>
-                <p class="animate-fade-left delay-3">Yamaç Köyü, konumu itibarıyla Dilek Yarımadası dağlarından esen serin ve nemsiz poyraz rüzgarlarını doğrudan alır. Bu esinti, incirlerimizin dalında kendi kendine ballanıp suyunu çekerek en ideal kıvamda kurumasına imkan sağlar. Ege'nin bu doğal hediyesini hiçbir kimyasal işleme tabi tutmadan, geleneksel kurutma sergilerinde kurutuyor ve el işçiliğiyle seçerek paketliyoruz.</p>
+                <h2 class="animate-fade-left delay-2">{{ \App\Models\SiteContent::getValue('about_title', 'Söke Yamaç Köyü Gıda Tarım') }}</h2>
+                <p class="animate-fade-left delay-3">{{ \App\Models\SiteContent::getValue('about_text_1') }}</p>
+                <p class="animate-fade-left delay-3">{{ \App\Models\SiteContent::getValue('about_text_2') }}</p>
                 
                 <div class="stats-grid animate-fade-up delay-3">
                     <div class="stat-item">
@@ -29,8 +29,8 @@
             </div>
             
             <div class="about-image-stack animate-fade-scale">
-                <img src="{{ asset($photos[11]->path ?? 'images/11.jpg') }}?v={{ $photos[11]->updated_at->timestamp ?? time() }}" alt="Özenle Hazırlanan Defneli Kuru İncirler" class="about-img-1 animate-fade-scale">
-                <img src="{{ asset($photos[2]->path ?? 'images/2.jpg') }}?v={{ $photos[2]->updated_at->timestamp ?? time() }}" alt="Dalında Yeşil İncirler" class="about-img-2 animate-fade-scale delay-1">
+                <img src="{{ asset('images/11.jpg') }}" alt="Özenle Hazırlanan Defneli Kuru İncirler" class="about-img-1 animate-fade-scale">
+                <img src="{{ asset('images/2.jpg') }}" alt="Dalında Yeşil İncirler" class="about-img-2 animate-fade-scale delay-1">
             </div>
         </div>
     </div>
@@ -94,16 +94,16 @@
         
         <div class="product-gallery">
             <div class="gallery-img-wrapper reveal-left">
-                <img src="{{ asset($photos[9]->path ?? 'images/9.jpg') }}?v={{ $photos[9]->updated_at->timestamp ?? time() }}" alt="Dalında Hasat İncelemesi" class="gallery-img">
+                <img src="{{ asset('images/9.jpg') }}" alt="Dalında Hasat İncelemesi" class="gallery-img">
             </div>
             <div class="gallery-img-wrapper reveal-right">
-                <img src="{{ asset($photos[7]->path ?? 'images/7.jpg') }}?v={{ $photos[7]->updated_at->timestamp ?? time() }}" alt="Taze Sarı Dağ İnciri" class="gallery-img focus-bottom">
+                <img src="{{ asset('images/7.jpg') }}" alt="Taze Sarı Dağ İnciri" class="gallery-img focus-bottom">
             </div>
             <div class="gallery-img-wrapper reveal-left">
-                <img src="{{ asset($photos[8]->path ?? 'images/8.jpg') }}?v={{ $photos[8]->updated_at->timestamp ?? time() }}" alt="Kraft Ambalajlı İncirler" class="gallery-img">
+                <img src="{{ asset('images/8.jpg') }}" alt="Kraft Ambalajlı İncirler" class="gallery-img">
             </div>
             <div class="gallery-img-wrapper reveal-right">
-                <img src="{{ asset($photos[11]->path ?? 'images/11.jpg') }}?v={{ $photos[11]->updated_at->timestamp ?? time() }}" alt="Yakın Çekim Ambalajlarımız" class="gallery-img">
+                <img src="{{ asset('images/11.jpg') }}" alt="Yakın Çekim Ambalajlarımız" class="gallery-img">
             </div>
         </div>
     </div>

@@ -44,8 +44,7 @@ class AdminController extends Controller
 
     public function dashboard()
     {
-        $photos = \App\Models\Photo::orderBy('id')->get()->keyBy('id');
-        return view('admin.dashboard', compact('photos'));
+        return view('admin.dashboard');
     }
 
     public function uploadImage(Request $request)
@@ -71,13 +70,41 @@ class AdminController extends Controller
         imagejpeg($im, $newFilePath, 90);
         imagedestroy($im);
 
-        $photo = \App\Models\Photo::find($imgId);
-        if ($photo) {
-            $photo->path = 'images/' . $fileName;
-            $photo->save();
+        return back()->with('success', 'Görsel ' . $imgId . '.jpg başarıyla güncellendi ve optimize edildi.');
+    }
+
+    public function content()
+    {
+        return view('admin.content');
+    }
+
+    public function updateContent(Request $request)
+    {
+        $data = $request->validate([
+            'hero_title' => ['required', 'string'],
+            'hero_description' => ['required', 'string'],
+            'product_1_title' => ['required', 'string'],
+            'product_1_desc' => ['required', 'string'],
+            'product_2_title' => ['required', 'string'],
+            'product_2_desc' => ['required', 'string'],
+            'product_3_title' => ['required', 'string'],
+            'product_3_desc' => ['required', 'string'],
+            'about_title' => ['required', 'string'],
+            'about_text_1' => ['required', 'string'],
+            'about_text_2' => ['required', 'string'],
+            'contact_address' => ['required', 'string'],
+            'contact_phone' => ['required', 'string'],
+            'contact_map_url' => ['required', 'string'],
+        ]);
+
+        foreach ($data as $key => $value) {
+            \App\Models\SiteContent::updateOrCreate(
+                ['key' => $key],
+                ['value' => $value]
+            );
         }
 
-        return back()->with('success', 'Görsel ' . $imgId . '.jpg başarıyla güncellendi ve optimize edildi.');
+        return back()->with('success', 'Site içerik metinleri başarıyla güncellendi.');
     }
 
     public function settings()
@@ -103,5 +130,18 @@ class AdminController extends Controller
         $user->save();
 
         return back()->with('success', 'Ayarlar başarıyla güncellendi.');
+    }
+
+    public function messages()
+    {
+        $messages = \App\Models\Message::orderBy('created_at', 'desc')->get();
+        return view('admin.messages', compact('messages'));
+    }
+
+    public function deleteMessage($id)
+    {
+        $message = \App\Models\Message::findOrFail($id);
+        $message->delete();
+        return back()->with('success', 'Mesaj başarıyla silindi.');
     }
 }
